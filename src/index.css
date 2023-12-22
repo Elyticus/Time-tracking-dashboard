@@ -60,14 +60,18 @@ body {
   color: var(--Desaturated-blue);
 }
 
-.stats > p {
+.stats > button {
   cursor: pointer;
   margin-top: 2em;
   text-decoration: none;
   color: var(--Desaturated-blue);
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 1em;
 }
 
-.stats > p:hover {
+.stats > button:hover {
   color: white;
 }
 
@@ -108,9 +112,15 @@ body {
 }
 
 .dashboard-card {
+  cursor: pointer;
   position: relative;
   background-color: var(--Dark-blue);
   border-radius: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  background-color: hsl(235, 34%, 35%);
 }
 
 .card-icon {
@@ -153,10 +163,11 @@ body {
 .ellipsis-icon {
   cursor: pointer;
   margin-right: 2em;
+  opacity: 50%;
 }
 
 .ellipsis-icon:hover {
-  opacity: 50%;
+  opacity: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -164,6 +175,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
+    overflow: hidden;
   }
 
   .container {
@@ -172,16 +184,18 @@ body {
     height: 99vh;
     gap: 2em;
     box-sizing: border-box;
+    margin-top: 2em;
   }
 
   .main-card {
     align-items: start;
-    padding: 2.8em 0 2em 1.7em;
+    padding: 3em 0 3em 1.7em;
   }
 
   .second-card {
-    padding: 0 0 4em 0;
-    margin-bottom: 2.5em;
+    padding: 0 0 3em 0;
+    margin-bottom: 0;
+    width: 250px;
   }
 
   .main-card,
@@ -190,15 +204,16 @@ body {
   }
 
   main {
-    width: 250px;
+    display: flex;
+    gap: 2em;
   }
 
   .stats {
     margin-left: 1.7em;
   }
 
-  .stats > p {
-    margin-top: 1em;
+  .stats > button {
+    margin-top: 1.82em;
     width: 30px;
   }
 
@@ -210,6 +225,8 @@ body {
   .dashboard-data {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 4.5em;
+    margin-top: 2.5em;
   }
 
   .dashboard-card {
@@ -220,6 +237,11 @@ body {
 
   .icons {
     height: 80px;
+  }
+
+  .progress > h1 {
+    font-size: 3em;
+    margin: 0;
   }
 
   .progress {

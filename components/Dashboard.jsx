@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import Content from "./Content";
-import data from "../src/data";
+import { useEffect } from "react";
 
 const Dashboard = () => {
   useEffect(() => {
@@ -18,10 +16,6 @@ const Dashboard = () => {
 
     setIconColors();
   }, []);
-
-  const dataArr = data.map((item) => <Content key={item.id} {...item} />);
-
-  return <div className="dashboard-data">{dataArr}</div>;
 };
 
 export default Dashboard;
