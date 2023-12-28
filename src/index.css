@@ -75,6 +75,10 @@ body {
   color: white;
 }
 
+.stats > button:focus {
+  color: white;
+}
+
 .avatar-logo {
   max-width: 60px;
   border: 5px solid white;
@@ -98,7 +102,6 @@ body {
   border-radius: 20px;
   display: flex;
   justify-content: end;
-  align-items: center;
   width: 100%;
   z-index: -1;
   top: -40px;
@@ -116,11 +119,20 @@ body {
   position: relative;
   background-color: var(--Dark-blue);
   border-radius: 20px;
-  transition: 0.2s ease-in-out;
+  transition: ease-in 0.2s;
+  text-decoration: none;
 }
 
 .dashboard-card:hover {
   background-color: hsl(235, 34%, 35%);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.dashboard-card:focus::after {
+  outline: 0.17rem solid #fff;
+  outline-offset: 0.2rem;
 }
 
 .card-icon {
@@ -182,9 +194,7 @@ body {
     display: flex;
     align-items: center;
     height: 99vh;
-    gap: 2em;
     box-sizing: border-box;
-    margin-top: 2em;
   }
 
   .main-card {
@@ -233,10 +243,6 @@ body {
     position: relative;
     width: 250px;
     height: 200px;
-  }
-
-  .icons {
-    height: 80px;
   }
 
   .progress > h1 {

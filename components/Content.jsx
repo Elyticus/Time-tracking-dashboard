@@ -2,7 +2,7 @@ import data from "../src/data";
 
 export default function Content(props) {
   const dataArr = data.map((item) => (
-    <div className="dashboard-card" key={item.id}>
+    <a href="#" className="dashboard-card" key={item.id}>
       <div className="icons">
         <img className="card-icon" src={item.img} alt="activity icon" />
       </div>
@@ -23,7 +23,7 @@ export default function Content(props) {
           <h5>{item[`${props.selectedTimeFrame}Date`]}</h5>
         </div>
       </div>
-    </div>
+    </a>
   ));
 
   return <div className="dashboard-data">{dataArr}</div>;
